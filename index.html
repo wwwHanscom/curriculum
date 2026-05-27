@@ -5,13 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curriculum</title>
+    <!-- Archivo CSS -->
+     <!-- CON LA CARPETA -->
+    <link rel="stylesheet" href="stylesheets/style.css">
 </head>
 
 <body>
 
     <header>
         <h1>Hans Rivas</h1>
-        <p>Estudiante de la ESPOL | hanrivas@espol.edu.ec | +593 991 507 567</p>
+        <p>Estudiante de la ESPOL | hanrivas@espol.edu.ec | +593 91 507 567</p>
     </header>
 
     <nav>
@@ -22,18 +25,22 @@
             <li><a href="#habilidades">Habilidades</a></li>
             <li><a href="#proyectos">Proyectos</a></li>
             <li><a href="#testimonio">Testimonio</a></li>
+            <li><a href="#imagen">Imagen</a></li>
+            <li><a href="#video">Video</a></li>
+            <li><a href="#formulario">Formulario</a></li>
+            <li><a href="#ubicacion">Ubicación</a></li>
         </ul>
     </nav>
 
     <main>
         <section id="resumen">
-            <h2>Resumen</h2>
+            <h2 class="subtitle">Resumen</h2>
             <p>Soy un estudiante de Ingenieria al cual le gusta la programación, tengo experiencia con lenguajes como
                 Python, Java y C.</p>
         </section>
 
         <section id="experiencia">
-            <h2>Experiencia</h2>
+            <h2 class="subtitle">Experiencia</h2>
             <ul>
                 <li>2022: Pasante en el GAD Municipal del Cantón Santa Lucía - Departamento de Evaluo y Catastro.</li>
                 <li>2025: Ayudante de AD HORDEM en la Escuela de Negociós de la ESPOL (ESPAE)</li>
@@ -41,7 +48,7 @@
         </section>
 
         <section id="educacion">
-            <h2>Educación</h2>
+            <h2 class="subtitle">Educación</h2>
             <ul>
                 <li>2010 - 2013: Escuela Particular "Filadelfia del Dios Viviente" - Educación Inicial y Basica
                     Elemental.</li>
@@ -53,18 +60,8 @@
             </ul>
         </section>
 
-        <section id="habilidades">
-            <h2>Habilidades</h2>
-            <ul>
-                <li>Manejo de aplicaciones Ofimaticas.</li>
-                <li>Conocimiento en lenguajes de programación como Python, Java y C.</li>
-                <li>Conocimiento basico de SQL.</li>
-                <li>Conocimiento en desarrollo de prototipos de aplicaciones web y moviles.</li>
-            </ul>
-        </section>
-
         <section id="proyectos">
-            <h2>Proyectos</h2>
+            <h2 class="subtitle">Proyectos</h2>
             <ol>
                 <li>2024: Desarrollo de una aplicación movil (VOLT) que conecte las necesidades de voluntarios con
                     adultos mayores.</li>
@@ -74,10 +71,80 @@
         </section>
 
         <section id="testimonio">
-            <h2>Testimonios</h2>
+            <h2 class="subtitle">Testimonios</h2>
             <ul>
-                <blockquote>Holaaaaa</blockquote>
+                <blockquote>+593 91 231 235: Contacto de la Abg. Dayanara Castro, Concejal del cantón Santa Lucía (2022-2023)</blockquote>
             </ul>
+        </section>
+
+        <section id="imagen">
+            <h2 class="subtitle">Imagen aleatoria</h2>
+            <figure>
+                <img src="https://picsum.photos/600/400" alt="Imagen aleatoria" id="photo" />
+                <figcaption>Imagen aleatoria generada desde Picsum</figcaption>
+            </figure>
+        </section>
+
+        <section id="video">
+            <h2 class="subtitle">Video de YouTube</h2>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section id="formulario">
+            <h2 class="subtitle">Formulario</h2>
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+                <p></p>
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena" name="contrasena" placeholder="Ingresa una contraseña" required>
+                <p></p>
+                <label for="telefono">Teléfono:</label>
+                <input type="phone" id="telefono" name="telefono" placeholder="Ingresa tu número de teléfono" required>
+                <p></p>
+                <label for="fecha_nac">Fecha de nacimiento:</label>
+                <input type="date" id="fecha_nac" name="fecha_nac" required>
+                <p></p>
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" name="edad" min="0" placeholder="Edad" required>
+                <p></p>
+                <label for="estado_civil">Seleccione estado civil:</label>
+                <select id="estado_civil" name="estado_civil" required>
+                    <option value="">-- Seleccione --</option>
+                    <option value="soltero" selected>Soltero</option>
+                    <option value="casado">Casado</option>
+                    <option value="divorciado">Divorciado</option>
+                    <option value="otro">Otro</option>
+                </select>
+                <p></p>
+                <fieldset>
+                    <legend>Género</legend>
+                    <label><input type="radio" name="genero" value="hombre" required> Hombre</label>
+                    <p></p>
+                    <label><input type="radio" name="genero" value="mujer"> Mujer</label>
+                </fieldset>
+                <p></p>
+                <fieldset>
+                    <legend>Seleccione sus habilidades</legend>
+                    <label><input type="checkbox" name="habilidades[]" value="Programacion"> Programación</label>
+                    <p></p>
+                    <label><input type="checkbox" name="habilidades[]" value="Desarrollo de app"> Desarrollo de app</label>
+                    <p></p>
+                    <label><input type="checkbox" name="habilidades[]" value="Diseno web"> Diseño web</label>
+                </fieldset>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <section id="ubicacion">
+            <h2 class="subtitle">Ubicación</h2>
+            <p>Encuéntrame en la ESPOL, Guayaquil, Ecuador.</p>
+            <div class="map-container">
+                <iframe src="https://maps.google.com/maps?q=Escuela%20Superior%20Polit%C3%A9cnica%20del%20Litoral%20ESPOL&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </section>
     </main>
 
