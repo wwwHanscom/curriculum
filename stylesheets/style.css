@@ -38,6 +38,36 @@ nav > ul {
     gap: 1rem;
 }
 
+section > form {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    row-gap: 1rem;
+    column-gap: 1rem;
+    align-items: center;
+}
+
+section > form label {
+    justify-self: end;
+}
+
+section > form input,
+section > form select {
+    width: 30%;
+}
+
+section > form p {
+    display: none;
+}
+
+section > form fieldset {
+    grid-column: 1 / -1;
+}
+
+section > form button {
+    grid-column: 2;
+    justify-self: start;
+}
+
 section {
     border: 0.2pt solid #cedddd;
     margin: 4px 2px 8px;
@@ -51,4 +81,31 @@ section {
     width: 100%;
     min-height: 350px;
     border: none;
+}
+
+#referencias {
+
+     /* Activa el modelo Flexbox */
+     display: flex;
+
+     /* Permite que los hijos pasen a la siguiente línea si no caben */
+     flex-wrap: wrap;
+
+     /* Espaciado uniforme entre filas y columnas */
+     gap: 1rem;
+
+}
+
+#referencias > h2 {
+
+     /* Hace que el subtítulo ocupe el 100% del ancho del contenedor */
+     flex: 0 0 100%;
+
+}
+
+#referencias > article {
+
+     /* Distribuye equitativamente los artículos en tres columnas */
+     flex: 1 1 calc(33.333% - 1rem);
+
 }
